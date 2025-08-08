@@ -1,0 +1,16 @@
+function loadPage(page) {
+  const content = document.getElementById('content');
+  fetch(`pages/${page}.html`)
+    .then(res => {
+      if (!res.ok) throw new Error("Page not found");
+      return res.text();
+    })
+    .then(html => {
+      content.innerHTML = html;
+    })
+    .catch(err => {
+      content.innerHTML = `<p>Page failed to load.</p>`;
+      console.error(err);
+    });
+}
+

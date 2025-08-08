@@ -1,0 +1,19 @@
+const pages = {
+  home: `
+    <h2>Welcome to TAA</h2>
+    <p>Your hub for unblocked games and tools.</p>
+  `,
+  games: `
+    <h2>Games</h2>
+    <div id="games-container"></div>
+  `,
+  tools: `
+    <h2>Tools</h2>
+    <p>Coming soon!</p>
+  `,
+  proxy: `
+    <h2>Proxy</h2>
+    <p>Coming soon!</p>
+  `
+};
+
