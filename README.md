@@ -4,6 +4,7 @@ I dont want to speak about much so just copy paste what is below into you consle
 
 
 git clone https://github.com/Redacted-gav/TAA-The-Absolute-Anonymous-.git && cd TAA-The-Absolute-Anonymous-
+
 git clone https://gitlab.com/3kh0/3kh0-assets.git games
 
 
