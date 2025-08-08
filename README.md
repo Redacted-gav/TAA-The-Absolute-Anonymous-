@@ -1,2 +1,4 @@
 # TAA-The-Absolute-Anonymous-
-Read the README if you want to download
+
+I dont want to speak about much so just copy paste what is below into you consle put it on a USB device and your done. All the games from 3kh0 he is cool.
+
