@@ -1,0 +1,51 @@
+/* base.css - resets, fonts, and body */
+
+/* Reset & box model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Base body styling */
+body {
+  background: linear-gradient(180deg, #0d0d0d 0%, #1a1a1a 100%);
+  color: #f5f5f5;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  text-align: center;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Better text rendering */
+body, input, button {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Link styling */
+a {
+  color: #ff4747;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #ff7474;
+}
+
+/* Default selection color */
+::selection {
+  background: #ff4747;
+  color: white;
+}
+

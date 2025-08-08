@@ -1,0 +1,137 @@
+/* groupchat.css */
+
+/* Chat Window */
+#chat-window {
+  height: 480px; /* taller */
+  overflow-y: auto;
+  background: linear-gradient(135deg, #1a1a1a, #222222);
+  border: 2px solid #ff5252;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(255, 82, 82, 0.6);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #e0e0e0;
+  user-select: text;
+  scroll-behavior: smooth;
+  transition: box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+#chat-window:hover {
+  box-shadow: 0 0 35px rgba(255, 82, 82, 0.9);
+}
+
+/* Messages */
+#chat-window div {
+  padding: 0.6rem 1rem;
+  margin: 0;
+  border-radius: 12px;
+  word-wrap: break-word;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeSlideIn 0.35s forwards;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.6);
+  background-color: #2a2a2a;
+  color: #f5f5f5;
+  max-width: 75%;
+  align-self: flex-start;
+  line-height: 1.4;
+  font-size: 0.95rem;
+}
+
+#chat-window div.user-message {
+  background-color: #ff5252;
+  color: #fff;
+  box-shadow: 0 3px 10px rgba(255, 82, 82, 0.8);
+  align-self: flex-end;
+  max-width: 75%;
+}
+
+/* Fade and slide in animation for messages */
+@keyframes fadeSlideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Inputs container for better layout */
+#inputs-container {
+  display: flex;
+  gap: 1.25%;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Inputs */
+#username-input,
+#chat-input {
+  padding: 0.8rem 1.2rem;
+  border: 2px solid transparent;
+  border-radius: 16px;
+  background-color: #222;
+  color: #eee;
+  font-size: 1.1rem;
+  outline: none;
+  transition: border-color 0.35s ease, box-shadow 0.35s ease, background-color 0.35s ease;
+  box-shadow: inset 0 0 8px rgba(0,0,0,0.7);
+  font-weight: 600;
+  flex-grow: 1;
+  min-width: 200px;
+  max-width: 40%;
+  box-sizing: border-box;
+}
+
+#username-input:focus,
+#chat-input:focus {
+  border-color: #ff5252;
+  box-shadow: 0 0 14px #ff5252, inset 0 0 12px #ff5252;
+  background-color: #2e2e2e;
+}
+
+/* Send Button */
+#send-btn {
+  padding: 0.8rem 1.6rem;
+  background-color: #ff5252;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: 0 5px 20px rgba(255, 82, 82, 0.8);
+  transition: background-color 0.4s ease, box-shadow 0.4s ease, transform 0.2s ease;
+  flex-shrink: 0;
+  min-width: 120px;
+}
+
+#send-btn:hover,
+#send-btn:focus {
+  background-color: #ff7373;
+  box-shadow: 0 8px 28px rgba(255, 115, 115, 0.95);
+  outline: none;
+  transform: scale(1.1);
+}
+
+/* Responsive */
+@media (max-width: 720px) {
+  #inputs-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  #username-input,
+  #chat-input {
+    max-width: 100%;
+  }
+
+  #send-btn {
+    width: 100%;
+    min-width: auto;
+  }
+}
+

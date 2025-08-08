@@ -1,0 +1,53 @@
+/* components.css - game cards and reusable components (lightweight version) */
+#games-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;  /* centers cards horizontally */
+  gap: 1.5rem;              /* space between cards */
+  padding: 1rem;
+}
+
+.game-card {
+  background: #1a1a1a;
+  border-radius: 10px;
+  padding: 1.25rem 1.5rem;
+  flex: 1 1 280px;       /* grow, shrink, base width */
+  max-width: 350px;      /* max width per card */
+  border: 1px solid #333;
+  box-shadow: 0 2px 6px rgba(255, 82, 82, 0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  margin: 0;             /* margin handled by gap */
+  box-sizing: border-box;
+}
+
+
+/* Hover effect */
+.game-card:hover,
+.game-card:focus-within {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(255, 82, 82, 0.3);
+}
+
+/* Title */
+.game-card h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+  color: white;
+}
+
+/* Links */
+.game-card a {
+  color: #ff5252;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 0.5rem;
+  transition: color 0.2s ease;
+}
+
+.game-card a:hover,
+.game-card a:focus {
+  color: #ff7878;
+  text-decoration: underline;
+}
+
